@@ -1,8 +1,8 @@
 export const colors = {
   // Primary
-  blueLight: '#7095f5',
-  blue: '#4D7BF3',
-  blueDark: '#3556aa',
+  blueLight: '#0055ff',
+  blue: '#0047d6',
+  blueDark: '#0039ab',
   // Secondary
   doveGray: '#707070',
   raven: '#7D848F',

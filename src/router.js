@@ -1,11 +1,22 @@
 import { lazy } from 'react'
 
-const Example = lazy(() => import('./modules/__example__/example.container'))
+import {ArrowLeftIcon} from './assets/arrow-left'
+
+const Main = lazy(() => import('./modules/content/content-container'))
+
+const Page = lazy(() => import('./modules/page/page-container'))
+
+export const loginRoutes = [
+  {path: '/', component: Main}
+]
 
 export const routes = [
-  { path: '/', component: Example, exact: true },
+  { path: '/page', component: Page, exact: true },
 ]
 
-export const navRoutes = [
-  { path: '/', name: 'Example' },
-]
+export const navRoutes = {
+  'Admin': [
+    {path: '/', name:'Main', icon: ArrowLeftIcon},
+    { path: '/page', component: Page, exact: true },
+  ]
+}
